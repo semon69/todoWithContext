@@ -1,12 +1,17 @@
-import './App.css'
-import TodoList from './components/TodoList'
+import "./App.css";
+import TodoForm from "./components/TodoForm";
+import TodoList from "./components/TodoList";
+import TodoProvider from "./context/TodoProvider";
 
 function App() {
   return (
     <div>
-      <TodoList></TodoList>
+      <TodoProvider>
+        <TodoForm />
+        <TodoList></TodoList>
+      </TodoProvider>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

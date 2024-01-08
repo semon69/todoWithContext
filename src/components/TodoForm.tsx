@@ -5,8 +5,6 @@ const TodoForm = () => {
   const { dispatch } = useContext(TodoContext)!;
   const [task, setTask] = useState("");
 
-//   console.log(state);
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const todo: TTodo = {
@@ -14,7 +12,7 @@ const TodoForm = () => {
       title: task,
       isCompleted: false,
     };
-    // console.log(todo);
+
     dispatch({ type: "addTodo", payload: todo });
   };
 
